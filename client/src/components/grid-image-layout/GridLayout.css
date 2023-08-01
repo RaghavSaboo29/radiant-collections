@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;400&family=Akatab:wght@500;600&family=Gowun+Batang:wght@700&family=Kaisei+Tokumin:wght@400;500&family=Ysabeau:wght@300;400;500&display=swap');
+
+.grid-container {
+  display: grid;
+  height: 1000px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 1rem;
+  row-gap: 2rem;
+  margin: 30px 120px;
+}
+
+.grid-heading {
+  text-align: center;
+  margin: 85px 0px;
+  text-transform: uppercase;
+  font-size: 42px;
+  font-family: 'Forum', serif;
+}
+.item {
+  height: 500px;
+}
+.grid-container .item5 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.item h4 {
+  font-weight: 300;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1300px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    margin: 50px 5px;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    height: 650px;
+    overflow-x: hidden;
+  }
+  .grid-container .item3 {
+    grid-column: span 1;
+    grid-row: 3/4;
+  }
+  .grid-container .item4 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .grid-container .item5 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .item h4 {
+    font-weight: 300;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  .grid-heading {
+    font-size: 25px;
+    margin: 0px 0px;
+  }
+  .item {
+    height: auto;
+  }
+}

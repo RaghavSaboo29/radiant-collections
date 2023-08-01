@@ -1,0 +1,46 @@
+.slider {
+  width: 100%;
+}
+.slider-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 700px;
+}
+
+.slider-item .slider-content h3 {
+  font-size: 55px;
+  font-family: 'Forum', cursive;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+.slider-item-1 .slider-content h3 {
+  color: black;
+}
+.carousel-caption {
+  position: absolute;
+  text-transform: uppercase;
+  right: 15%;
+  bottom: 13.25rem;
+  left: 15%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+
+  text-align: center;
+}
+.carousel-control-prev-icon .changed {
+  /* height: 100px; */
+  font-weight: 500;
+}
+
+@media screen and (max-width: 780px) {
+  .slider-item img {
+    object-fit: cover;
+    height: 400px;
+  }
+  .carousel-caption {
+    bottom: 6.25rem;
+  }
+  .slider-item .slider-content h3 {
+    font-size: 25px;
+  }
+}

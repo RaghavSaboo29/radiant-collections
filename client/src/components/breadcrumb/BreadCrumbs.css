@@ -1,0 +1,45 @@
+.crumb-container {
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.crumb-container .crumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.crumb-list .crumb-item:after {
+  content: '/';
+  margin-left: 3px;
+  margin-right: 3px;
+  color: rgb(164, 115, 54);
+}
+.crumb-list .crumb-item:last-child::after {
+  display: none;
+}
+
+.crumb-list .crumb-item a,
+span {
+  font-size: 20px;
+}
+.crumb-list .crumb-item a {
+  text-decoration: none;
+  color: rgb(164, 115, 54);
+  font-weight: 500;
+}
+.crumb-list .crumb-item a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 450px) {
+  .crumb-container {
+    margin-top: 45px;
+    margin-left: 10px;
+  }
+  .crumb-list .crumb-item a,
+  span {
+    font-size: 15px;
+  }
+}

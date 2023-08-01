@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;400&family=Akatab:wght@500;600&family=Gowun+Batang&family=Kaisei+Tokumin:wght@400;500&family=Ysabeau:wght@300;400;500&display=swap');
+
+.heading-2 {
+  background-color: rgb(254, 168, 168);
+  padding: 2px 2px;
+  /* height: 35px; */
+}
+.heading-2 h3 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 23px;
+  font-family: 'Gowun Batang', sans-serif;
+  color: white;
+}
+nav {
+  position: sticky;
+  top: 0;
+}
+
+.navbar-2 {
+  display: flex;
+  justify-content: start;
+  gap: 3rem;
+  width: 100%;
+  margin-bottom: 2px;
+  padding: 0px 50px;
+  align-items: center;
+  height: 120px;
+  background-color: rgb(242, 235, 219);
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.2) 0px 30px 60px -30px;
+}
+.navbar-2 .logo-2 {
+  height: 170px;
+  width: 170px;
+}
+.logo-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.navlinks-2 {
+  width: 70%;
+}
+.navlinks-2 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  height: 70px;
+}
+.navlinks-2 li {
+  display: block;
+  height: 100%;
+  margin-top: 45px;
+}
+.navlinks-2 li .navLink {
+  color: black;
+  text-transform: uppercase;
+  /* font-family: 'Ysabeau', sans-serif; */
+  font-family: 'Lato', sans-serif;
+  font-size: 15.5px;
+  font-weight: 300;
+}
+ul li .navLink {
+  position: relative;
+}
+ul li .navLink::before {
+  content: '';
+  position: absolute;
+  top: 52px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid black;
+  opacity: 0;
+  transition: 0.1s;
+}
+ul li .navLink:hover::before {
+  opacity: 1;
+  transform: scaleY(0.9);
+  cursor: pointer;
+}
+.search-box {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.search-box .search-input {
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: -130px;
+  width: 300px;
+  height: 40px;
+  border: 2px solid rgb(184, 136, 14);
+  border-radius: 4px;
+  text-align: center;
+}
+.search-box .search-icon {
+  font-size: 23px;
+  cursor: pointer;
+}
+.navbar-2 .menu-icon {
+  display: none;
+}
+
+@media screen and (min-width: 1634px) and (max-width: 1770px) {
+  .navlinks-2 li .navLink {
+    font-size: 14px;
+  }
+  .search-box .search-input {
+    top: 59px;
+    right: -140px;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1633px) {
+  .navlinks-2 li .navLink {
+    font-size: 12px;
+  }
+  .search-box .search-input {
+    top: 59px;
+    right: -140px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .navbar-2 .logo-2 {
+    font-size: 25px;
+    order: 10;
+  }
+  .navbar-2 .navlinks-2 {
+    display: none;
+  }
+  .navlinks-2 li {
+    height: 50px;
+  }
+  ul li .navLink::before {
+    width: 0;
+    height: 0;
+  }
+  .navbar-2 {
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 15px;
+    position: relative;
+  }
+
+  .navbar-2 .menu-icon {
+    font-size: 25px;
+    display: block;
+    order: -3;
+    cursor: pointer;
+  }
+  .navbar-2 .active {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 100%;
+    padding: 0;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    background-color: white;
+    height: auto;
+    box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  .active li {
+    margin-top: 0;
+  }
+  .active li .navLink {
+    color: rgb(163, 131, 56);
+    font-weight: 300;
+  }
+  /* .search-box {
+    order: -1;
+  } */
+  .search-box .search-input {
+    display: block;
+    position: absolute;
+    top: 59px;
+    right: -13px;
+    width: 300px;
+    height: 40px;
+    border: 2px solid rgb(184, 136, 14);
+    border-radius: 4px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1200px) {
+  .search-box .search-input {
+    display: block;
+    right: -12px;
+  }
+  .heading-2 h3 {
+    font-size: 19px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .search-box .search-input {
+    display: block;
+    width: 100vw;
+    right: -17px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 499px) {
+  .navbar-2 .logo-2 {
+    font-size: 20px;
+    order: 2;
+  }
+  .heading-2 h3 {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 359px) {
+  .heading-2 h3 {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .navbar-2 .logo-2 {
+    font-size: 15px;
+    order: 2;
+  }
+}

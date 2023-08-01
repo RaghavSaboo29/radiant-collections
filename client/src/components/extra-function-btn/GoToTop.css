@@ -1,0 +1,33 @@
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-btn {
+  font-size: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #fff;
+  background-color: rgb(173, 147, 82);
+  /* background-color: rgb(98 84 243); */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 6rem;
+  right: 3rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 1150px) {
+  .top-btn {
+    font-size: 1.3rem;
+    right: 1.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&family=Cinzel+Decorative:wght@400;700&family=Forum&family=Italiana&family=Josefin+Slab:wght@300;400;600&family=Lato:wght@300;400&family=MedievalSharp&family=Rock+Salt&display=swap');
+body,
+html {
+  overflow-x: hidden;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+/* body {
+  height: 100%;
+} */
+/* body {
+  position: relative;
+  min-height: 100vh;
+
+  box-sizing: inherit;
+  padding-bottom: 22rem;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 60rem;
+  }
+} */

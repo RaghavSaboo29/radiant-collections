@@ -1,0 +1,149 @@
+/* .banner {
+  width: 100vw;
+  height: 650px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.banner .bannerImg {
+  width: 100vw;
+  height: 580px;
+  padding: 0px 100px;
+}
+
+.bannerImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bannerImg .header {
+  position: absolute;
+  top: 45%;
+  left: 42%;
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 480px) and (max-width: 790px) {
+  .bannerImg .header {
+    font-size: 40px;
+    font-weight: 400;
+    top: 52%;
+    left: 35%;
+  }
+  .banner .bannerImg {
+
+    height: 400px;
+  }
+  .banner {
+    height: 550px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .bannerImg .header {
+    font-size: 30px;
+    font-weight: 400;
+    top: 42%;
+    left: 30%;
+  }
+  .banner .bannerImg {
+
+    height: 300px;
+  }
+  .banner {
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 390px) and (max-width: 590px) {
+  .container {
+    width: 400px;
+    height: 250px;
+    padding-left: 2px;
+
+  }
+  .container .header {
+    font-size: 25px;
+    font-weight: 400;
+    top: 30%;
+    left: 36%;
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 389px) {
+  .container {
+    width: 365px;
+    height: 220px;
+    padding: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+  }
+  .container .header {
+    font-size: 24px;
+    font-weight: 400;
+    top: 35%;
+    left: 34%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .container {
+    width: 348px;
+    height: 220px;
+    padding: 0px;
+    margin: 5px 5px;
+  }
+  .container .header {
+    font-size: 24px;
+    font-weight: 400;
+    top: 37%;
+    left: 34%;
+  }
+} */
+
+.banner {
+  height: 800px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner .bannerImg {
+  height: 75vh;
+  background-image: linear-gradient(rgb(0 0 0 / 60%), rgb(37 37 37 / 35%)),
+    url('../../images/decor-sub-cat/decor-banner.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+}
+.bannerImg h1 {
+  font-size: 60px;
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: 5px;
+}
+
+@media screen and (max-width: 580px) {
+  .banner {
+    height: 300px;
+  }
+  .bannerImg h1 {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .banner .bannerImg {
+    height: 238px;
+
+    background-size: cover;
+  }
+}

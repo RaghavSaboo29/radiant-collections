@@ -1,0 +1,108 @@
+/* .soft-section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 700px;
+}
+.soft-section h2 {
+  font-weight: 400;
+}
+.soft-section .soft-img-section {
+  height: 600px;
+  width: 100vw;
+  padding: 0px 50px;
+}
+
+.soft-img-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1500px) {
+  .soft-section {
+    margin-top: 50px;
+    height: 600px;
+  }
+  .soft-section h2 {
+    font-weight: 400;
+  }
+  .soft-section .soft-img-section {
+    height: 450px;
+    width: 100vw;
+    padding: 0px 15px;
+  }
+}
+@media screen and (min-width: 581px) and (max-width: 1000px) {
+  .soft-section {
+    margin-top: 50px;
+    height: 500px;
+  }
+  .soft-section h2 {
+    font-weight: 400;
+  }
+  .soft-section .soft-img-section {
+    height: 350px;
+    width: 100vw;
+    padding: 0px 15px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .soft-section {
+    margin-top: 50px;
+    height: 550px;
+  }
+  .soft-section h2 {
+    font-weight: 400;
+  }
+  .soft-section .soft-img-section {
+    height: 250px;
+    width: 100vw;
+    padding: 0px 15px;
+  }
+} */
+.soft-section {
+  height: 800px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soft-section .soft-image {
+  height: 75vh;
+  background-image: linear-gradient(rgb(0 0 0 / 60%), rgb(37 37 37 / 35%)),
+    url('../../images/final-cushion.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+}
+.soft-image h1 {
+  font-size: 60px;
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: 5px;
+}
+
+@media screen and (max-width: 580px) {
+  .soft-section {
+    height: 300px;
+  }
+  .soft-image h1 {
+    font-size: 23px;
+  }
+  .soft-section .soft-image {
+    height: 238px;
+    background-size: cover;
+  }
+}

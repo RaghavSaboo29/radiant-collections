@@ -1,0 +1,42 @@
+.crockery-container {
+  height: 800px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crockery-container .crockery-box {
+  height: 75vh;
+  background-image: linear-gradient(rgb(0 0 0 / 60%), rgb(37 37 37 / 35%)),
+    url('../../images/crockery.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+}
+.crockery-box h1 {
+  font-size: 60px;
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: 5px;
+}
+
+@media screen and (max-width: 580px) {
+  .crockery-container {
+    height: 300px;
+  }
+  .crockery-box h1 {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  .crockery-container .crockery-box {
+    height: 238px;
+
+    background-size: cover;
+  }
+}
