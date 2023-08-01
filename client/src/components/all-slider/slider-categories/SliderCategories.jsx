@@ -96,7 +96,7 @@ const SliderCategories = () => {
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="slider-img">
-                    <img src={images[index]} alt="category-image" />
+                    <img src={images[index]} alt="" />
                   </div>
                   <h3>{c.name}</h3>
                 </Link>

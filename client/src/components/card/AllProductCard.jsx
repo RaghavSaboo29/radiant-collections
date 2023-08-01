@@ -4,11 +4,7 @@ const AllProductCard = (item) => {
   return (
     <div className="product-card">
       <div className="product-card-image">
-        <img
-          src={item?.images[0].url}
-          alt="product-image"
-          className="mainImg"
-        />
+        <img src={item?.images[0].url} alt="" className="mainImg" />
       </div>
       <div className="product-card-details">
         <h2 className="product-name">

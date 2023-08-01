@@ -13,7 +13,7 @@ const AboutUs = () => {
         </div>
         <div className="about-grid">
           <div className="about-img">
-            <img src={AboutUsImg} alt="about-us" />
+            <img src={AboutUsImg} alt="" />
           </div>
           <div className="about-details">
             <h4>Welcome to Radiant Collections and Decor</h4>

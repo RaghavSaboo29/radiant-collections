@@ -9,7 +9,7 @@ const MyImg = ({ images }) => {
         <div className="main-img">
           <img
             src={mainImage ? mainImage?.url : images[0]?.url}
-            alt="click on the below img"
+            alt="Main Img"
           />
         </div>
         <div className="grid grid-four-col">
@@ -17,7 +17,7 @@ const MyImg = ({ images }) => {
             <img
               src={index.url}
               onClick={() => setMainImage(index)}
-              alt="imgs"
+              alt=""
               key={i}
             />
           ))}

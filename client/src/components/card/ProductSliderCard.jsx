@@ -5,16 +5,8 @@ const ProductSliderCard = (product) => {
   return (
     <div className="product-card-slider">
       <div className="product-image">
-        <img
-          src={product?.images[0]?.url}
-          alt="product-image"
-          className="img-1"
-        />
-        <img
-          src={product?.images[1]?.url}
-          alt="product-image"
-          className="img-2"
-        />
+        <img src={product?.images[0]?.url} alt="" className="img-1" />
+        <img src={product?.images[1]?.url} alt="" className="img-2" />
       </div>
       <h3 className="product-title">
         {product.name.length > 25

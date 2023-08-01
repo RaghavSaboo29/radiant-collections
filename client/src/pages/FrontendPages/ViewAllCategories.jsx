@@ -51,11 +51,7 @@ const ViewAllCategories = () => {
           >
             <div className="category-item">
               <div className="category-img">
-                <img
-                  src={images[index]}
-                  alt="category-image"
-                  className="category-item-img"
-                />
+                <img src={images[index]} alt="" className="category-item-img" />
               </div>
               <h4 className="category-item-name">{c.name}</h4>
             </div>
