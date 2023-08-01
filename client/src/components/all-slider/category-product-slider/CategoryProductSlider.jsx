@@ -16,7 +16,7 @@ const CategoryProductSlider = (props) => {
     try {
       setLoading(true)
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-category/${props.name}/1`
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/product-category/${props.name}/1`
       )
       if (data?.success) {
         setCategoryProduct(data.products)

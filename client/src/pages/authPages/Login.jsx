@@ -13,10 +13,13 @@ const Login = () => {
     //import.meta.env.
     e.preventDefault()
     try {
-      const res = await axios.post('http://localhost:8080/api/v1/auth/login', {
-        email,
-        password,
-      })
+      const res = await axios.post(
+        'https://radiant-collections-and-decor.onrender.com/api/v1/auth/login',
+        {
+          email,
+          password,
+        }
+      )
       if (res && res.data.success) {
         setAuth({
           ...auth,

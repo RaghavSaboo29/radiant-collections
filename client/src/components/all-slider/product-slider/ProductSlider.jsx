@@ -13,7 +13,7 @@ const ProductSlider = () => {
   const getTrendingProduct = async () => {
     try {
       const { data } = await axios.get(
-        'http://localhost:8080/api/v1/product/get-trending'
+        'https://radiant-collections-and-decor.onrender.com/api/v1/product/get-trending'
       )
       if (data?.success) {
         setTrendingProduct(data.products)

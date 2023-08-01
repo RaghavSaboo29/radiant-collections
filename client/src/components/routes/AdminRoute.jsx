@@ -11,7 +11,7 @@ export default function AdminRoute() {
   useEffect(() => {
     const authCheck = async () => {
       const res = await axios.get(
-        'http://localhost:8080/api/v1/auth/admin-login'
+        'https://radiant-collections-and-decor.onrender.com/api/v1/auth/admin-login'
       )
       if (res.data.ok) {
         setOk(true)

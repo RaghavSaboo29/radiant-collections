@@ -25,7 +25,7 @@ const SingleCategory = () => {
     try {
       setLoading(true)
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-category/${params.slug}/${page}`
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/product-category/${params.slug}/${page}`
       )
       setLoading(false)
       setTotal(data.totalProducts)
@@ -41,7 +41,7 @@ const SingleCategory = () => {
       if (radio.length) {
         setLoading(true)
         const { data } = await axios.post(
-          `http://localhost:8080/api/v1/product/filter-category-product/${params.slug}/${filterPage}`,
+          `https://radiant-collections-and-decor.onrender.com/api/v1/product/filter-category-product/${params.slug}/${filterPage}`,
           {
             radio,
           }
@@ -52,7 +52,7 @@ const SingleCategory = () => {
       } else {
         setLoading(true)
         const { data } = await axios.get(
-          `http://localhost:8080/api/v1/product/product-category/${params.slug}/${page}`
+          `https://radiant-collections-and-decor.onrender.com/api/v1/product/product-category/${params.slug}/${page}`
         )
         setLoading(false)
         setProducts([...products, ...data?.products])
@@ -80,7 +80,7 @@ const SingleCategory = () => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        `http://localhost:8080/api/v1/product/filter-category-product/${params.slug}/${filterPage}`,
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/filter-category-product/${params.slug}/${filterPage}`,
         {
           radio,
         }

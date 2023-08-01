@@ -13,7 +13,7 @@ const AllProductSlider = () => {
   const getAllProducts = async () => {
     try {
       const { data } = await axios.get(
-        'http://localhost:8080/api/v1/product/get-product/product-list/1'
+        'https://radiant-collections-and-decor.onrender.com/api/v1/product/get-product/product-list/1'
       )
       setProducts(data.products)
     } catch (error) {

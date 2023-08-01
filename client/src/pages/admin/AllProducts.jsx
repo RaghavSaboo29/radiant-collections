@@ -12,7 +12,7 @@ const AllProducts = () => {
     try {
       setLoading(true)
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/admin-product/${page}`
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/admin-product/${page}`
       )
 
       setLoading(false)
@@ -27,7 +27,7 @@ const AllProducts = () => {
     try {
       setLoading(true)
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/admin-product/${page}`
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/admin-product/${page}`
       )
       setLoading(false)
       setProducts([...products, ...data?.products])

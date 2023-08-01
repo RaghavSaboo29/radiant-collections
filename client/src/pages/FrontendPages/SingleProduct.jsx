@@ -24,7 +24,7 @@ const SingleProduct = () => {
   const getSingleProduct = async () => {
     setLoading(true)
     const { data } = await axios.get(
-      `http://localhost:8080/api/v1/product/get-product/${params.id}`
+      `https://radiant-collections-and-decor.onrender.com/api/v1/product/get-product/${params.id}`
     )
     setLoading(false)
     setProduct(data.product)
@@ -39,7 +39,7 @@ const SingleProduct = () => {
     try {
       setLoading(true)
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/similar-product/${pid}/${cid}`
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/similar-product/${pid}/${cid}`
       )
       setLoading(false)
       setSimilarProducts(data?.products)
@@ -52,7 +52,7 @@ const SingleProduct = () => {
 
   const getSingleCategory = async (catid) => {
     const { data } = await axios.get(
-      `http://localhost:8080/api/v1/category/single-category/${catid}`
+      `https://radiant-collections-and-decor.onrender.com/api/v1/category/single-category/${catid}`
     )
     if (data?.success) {
       setCat(data.singleCategory)

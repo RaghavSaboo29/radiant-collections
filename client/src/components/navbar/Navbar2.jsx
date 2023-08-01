@@ -18,7 +18,7 @@ const Navbar2 = () => {
 
   const getAllCategory = async () => {
     const { data } = await axios.get(
-      'http://localhost:8080/api/v1/category/get-category'
+      'https://radiant-collections-and-decor.onrender.com/api/v1/category/get-category'
     )
     if (data?.success) {
       setCategory(data.category)
@@ -33,7 +33,7 @@ const Navbar2 = () => {
     e.preventDefault()
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/search/${values.keyword}`
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/search/${values.keyword}`
       )
       setValues({ ...values, results: data })
       navigate('/search')

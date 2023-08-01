@@ -24,7 +24,7 @@ const UpdateProduct = () => {
   const getSingleProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/get-product/${params.id}`
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/get-product/${params.id}`
       )
 
       setName(data.product.name)
@@ -47,7 +47,7 @@ const UpdateProduct = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        'http://localhost:8080/api/v1/category/get-category'
+        'https://radiant-collections-and-decor.onrender.com/api/v1/category/get-category'
       )
       if (data.success) {
         setCategories(data.category)
@@ -77,7 +77,7 @@ const UpdateProduct = () => {
       })
 
       const { data } = axios.put(
-        `http://localhost:8080/api/v1/product/update-product/${id}`,
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/update-product/${id}`,
         productData
       )
       if (data?.success) {
@@ -102,7 +102,7 @@ const UpdateProduct = () => {
       )
       if (!answer) return
       const { data } = await axios.delete(
-        `http://localhost:8080/api/v1/product/delete-product/${id}`
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/delete-product/${id}`
       )
       navigate('/dashboard/admin/allproducts')
     } catch (error) {

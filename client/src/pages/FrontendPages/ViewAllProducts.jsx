@@ -25,7 +25,7 @@ const ViewAllProducts = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        'http://localhost:8080/api/v1/category/get-category'
+        'https://radiant-collections-and-decor.onrender.com/api/v1/category/get-category'
       )
       if (data?.success) {
         setCategories(data?.category)
@@ -42,7 +42,7 @@ const ViewAllProducts = () => {
     try {
       setLoading(true)
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/get-product/product-list/${page}`
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/get-product/product-list/${page}`
       )
       setLoading(false)
       setProducts(data.products)
@@ -58,7 +58,7 @@ const ViewAllProducts = () => {
       if (checked.length || radio.length) {
         setLoading(true)
         const { data } = await axios.post(
-          `http://localhost:8080/api/v1/product/product-filters/${filterPage}`,
+          `https://radiant-collections-and-decor.onrender.com/api/v1/product/product-filters/${filterPage}`,
           {
             checked,
             radio,
@@ -70,7 +70,7 @@ const ViewAllProducts = () => {
       } else {
         setLoading(true)
         const { data } = await axios.get(
-          `http://localhost:8080/api/v1/product/get-product/product-list/${page}`
+          `https://radiant-collections-and-decor.onrender.com/api/v1/product/get-product/product-list/${page}`
         )
         setLoading(false)
         setProducts([...products, ...data?.products])
@@ -94,7 +94,7 @@ const ViewAllProducts = () => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        `http://localhost:8080/api/v1/product/product-filters/${filterPage}`,
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/product-filters/${filterPage}`,
         {
           checked,
           radio,

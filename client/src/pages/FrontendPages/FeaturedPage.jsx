@@ -11,7 +11,7 @@ const FeaturedPage = (props) => {
     try {
       setLoading(true)
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/${props.name}`
+        `https://radiant-collections-and-decor.onrender.com/api/v1/product/${props.name}`
       )
       if (data?.success) {
         setLoading(false)

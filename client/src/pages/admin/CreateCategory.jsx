@@ -14,12 +14,12 @@ const CreateCategory = () => {
     try {
       if (editedCategory) {
         const { editedData } = await axios.put(
-          `http://localhost:8080/api/v1/category/update-category/${editedCategory._id}`,
+          `https://radiant-collections-and-decor.onrender.com/api/v1/category/update-category/${editedCategory._id}`,
           { name }
         )
       } else {
         const { data } = await axios.post(
-          'http://localhost:8080/api/v1/category/create-category',
+          'https://radiant-collections-and-decor.onrender.com/api/v1/category/create-category',
           { name }
         )
       }
@@ -38,7 +38,7 @@ const CreateCategory = () => {
 
   const deleteCategory = async (id) => {
     const data = await axios.delete(
-      `http://localhost:8080/api/v1/category/delete-category/${id}`
+      `https://radiant-collections-and-decor.onrender.com/api/v1/category/delete-category/${id}`
     )
     getAllCategory()
   }
@@ -46,7 +46,7 @@ const CreateCategory = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        'http://localhost:8080/api/v1/category/get-category'
+        'https://radiant-collections-and-decor.onrender.com/api/v1/category/get-category'
       )
       if (data.success) {
         setCategories(data.category)
