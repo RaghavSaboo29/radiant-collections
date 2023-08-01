@@ -10,10 +10,10 @@ import { SearchProvider } from './context/search.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <AuthProvider>
     <SearchProvider>
-      <HashRouter>
+      <BrowserRouter>
         <ScrollToTop />
         <App />
-      </HashRouter>
+      </BrowserRouter>
     </SearchProvider>
   </AuthProvider>
 )
