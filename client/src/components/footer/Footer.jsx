@@ -11,24 +11,40 @@ const Footer = () => {
               <h4>Top Categories</h4>
               <ul>
                 <li>
-                  <a href="/category/showpieces" className="footer-link">
+                  <Link
+                    to="/category/showpieces"
+                    style={{ textDecoration: 'none' }}
+                    className="footer-link"
+                  >
                     ShowPieces
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/category/bedsheets" className="footer-link">
+                  <Link
+                    to="/category/bedsheets"
+                    style={{ textDecoration: 'none' }}
+                    className="footer-link"
+                  >
                     Bedsheets
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/category/crockery" className="footer-link">
+                  <Link
+                    to="/category/crockery"
+                    style={{ textDecoration: 'none' }}
+                    className="footer-link"
+                  >
                     Dining
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={`/category/women's-wear`} className="footer-link">
+                  <Link
+                    to={`/category/women's-wear`}
+                    style={{ textDecoration: 'none' }}
+                    className="footer-link"
+                  >
                     Women's Wear
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -36,9 +52,13 @@ const Footer = () => {
               <h4>About Us</h4>
               <ul>
                 <li>
-                  <a href="/about" className="footer-link">
+                  <Link
+                    to="/about"
+                    style={{ textDecoration: 'none' }}
+                    className="footer-link"
+                  >
                     About Radiant Collections
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -46,13 +66,14 @@ const Footer = () => {
               <h4>Contact Us</h4>
               <ul>
                 <li>
-                  <a
-                    href="https://wa.me/+918989161972"
+                  <Link
+                    to="https://wa.me/+918989161972"
                     target="_blank"
                     className="footer-link"
+                    style={{ textDecoration: 'none' }}
                   >
                     WhatsApp
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -60,24 +81,40 @@ const Footer = () => {
               <h4>Quick Links</h4>
               <ul>
                 <li>
-                  <a href="/trending" className="footer-link">
+                  <Link
+                    to="/trending"
+                    style={{ textDecoration: 'none' }}
+                    className="footer-link"
+                  >
                     Trendy Products
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/latest" className="footer-link">
+                  <Link
+                    to="/latest"
+                    style={{ textDecoration: 'none' }}
+                    className="footer-link"
+                  >
                     Newly Launched Products
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/allproducts" className="footer-link">
+                  <Link
+                    to="/allproducts"
+                    style={{ textDecoration: 'none' }}
+                    className="footer-link"
+                  >
                     Explore All Products
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/" className="footer-link">
+                  <Link
+                    to="/"
+                    style={{ textDecoration: 'none' }}
+                    className="footer-link"
+                  >
                     Back to HomePage
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

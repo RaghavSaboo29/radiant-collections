@@ -163,9 +163,13 @@ const SingleProduct = () => {
               <div className="product-slider">
                 <Slider {...settings}>
                   {similarProducts.map((sp) => (
-                    <a href={`/category/${cat.slug}/${sp._id}`} key={sp._id}>
+                    <Link
+                      to={`/category/${cat.slug}/${sp._id}`}
+                      key={sp._id}
+                      style={{ textDecoration: 'none' }}
+                    >
                       <ProductSliderCard {...sp} key={sp._id} />
-                    </a>
+                    </Link>
                   ))}
                   <div className="card card-button">
                     <button

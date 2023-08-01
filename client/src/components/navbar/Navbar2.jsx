@@ -57,13 +57,13 @@ const Navbar2 = () => {
           {category.map((c) => (
             <React.Fragment key={c._id}>
               <li>
-                <a
+                <Link
                   className="navLink"
-                  href={`/category/${c.slug}`}
+                  to={`/category/${c.slug}`}
                   style={{ textDecoration: 'none' }}
                 >
                   {c.name}
-                </a>
+                </Link>
               </li>
             </React.Fragment>
           ))}
