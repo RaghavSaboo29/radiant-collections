@@ -15,6 +15,9 @@ import productRoutes from './routes/productRoutes.js'
 // dotenv.config()
 dotenv.config({ path: 'backend/.env' })
 
+const __filename= fileURLToPath(import.meta.url)
+const __dirname= path.dirname(__filename)
+
 //database config
 connectDB()
 

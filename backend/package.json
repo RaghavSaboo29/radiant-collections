@@ -5,11 +5,11 @@
   "main": "backend/server.js",
   "type": "module",
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
+    "start": "node server.js",
+    "server": "nodemon server.js",
     "client": "npm run dev --prefix ./client",
     "dev": "concurrently \"npm run start\" \"npm run client\"",
-    "build": "npm run build"
+    "build": "npm i"
   },
   "keywords": [],
   "author": "RaghavSaboo",
