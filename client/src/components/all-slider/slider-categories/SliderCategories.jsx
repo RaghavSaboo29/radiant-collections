@@ -35,7 +35,6 @@ const SliderCategories = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        // 'http://localhost:8080/api/v1/category/get-category'
         'https://radiant-collections-and-decor.onrender.com/api/v1/category/get-category'
       )
       if (data?.success) {

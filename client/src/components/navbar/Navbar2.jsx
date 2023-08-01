@@ -69,7 +69,7 @@ const Navbar2 = () => {
           ))}
           <li>
             <a
-              href="/allproducts"
+              href="https://radiant-collections-and-decor.onrender.com/allproducts"
               className="navLink"
               style={{ textDecoration: 'none' }}
             >
