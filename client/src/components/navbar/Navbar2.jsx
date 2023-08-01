@@ -68,13 +68,13 @@ const Navbar2 = () => {
             </React.Fragment>
           ))}
           <li>
-            <a
-              href="https://radiant-collections-and-decor.onrender.com/allproducts"
+            <Link
+              to="/allproducts"
               className="navLink"
               style={{ textDecoration: 'none' }}
             >
               <b> Shop All</b>
-            </a>
+            </Link>
           </li>
         </ul>
 
