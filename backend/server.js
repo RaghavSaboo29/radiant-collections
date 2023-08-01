@@ -36,7 +36,7 @@ app.use(cors())
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(fileUpload())
-app.use(express.static(path.join(__dirname, '../client/dist')))
+app.use(express.static(path.join(__dirname, '../client')))
 
 //routes
 
@@ -52,7 +52,7 @@ app.use('/api/v1/product', productRoutes)
 //   })
 // })
 app.use('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'))
+  res.sendFile(path.join(__dirname, '../client/index.html'))
 })
 
 //PORT
