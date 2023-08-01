@@ -17,7 +17,7 @@ const Slider = () => {
       >
         <Carousel.Item className="slider-item  " interval={2000}>
           <Link to={'/trending'}>
-            <img className="" src={img2} alt="Second slide" />
+            <img className="" src={img2} alt="" />
 
             <Carousel.Caption className="slider-content">
               <h3>Checkout the latest Trend</h3>
@@ -26,18 +26,19 @@ const Slider = () => {
         </Carousel.Item>
         <Carousel.Item className="slider-item slider-item-1" interval={2000}>
           <Link to={'/allproducts'}>
-            <img className="" src={img1} alt="First slide" />
+            <img className="" src={img1} alt="" />
             <Carousel.Caption className="slider-content">
               <h3>Explore Wide variety of Products </h3>
             </Carousel.Caption>
           </Link>
         </Carousel.Item>
         <Carousel.Item className="slider-item " interval={2000}>
-          <img className="" src={img3} alt="Third slide" />
-
-          <Carousel.Caption className="slider-content ">
-            <h3>Browse the Latest collection</h3>
-          </Carousel.Caption>
+          <Link to={'/latest'}>
+            <img className="" src={img3} alt="" />
+            <Carousel.Caption className="slider-content ">
+              <h3>Browse the Latest collection</h3>
+            </Carousel.Caption>
+          </Link>
         </Carousel.Item>
       </Carousel>
     </>
