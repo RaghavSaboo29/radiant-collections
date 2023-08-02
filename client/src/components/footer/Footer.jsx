@@ -39,11 +39,11 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    to={`/category/women's-wear`}
+                    to={`/category/women's-kurta`}
                     style={{ textDecoration: 'none' }}
                     className="footer-link"
                   >
-                    Women's Wear
+                    Women's Kurta
                   </Link>
                 </li>
               </ul>
