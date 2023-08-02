@@ -6,16 +6,20 @@ import 'slick-carousel/slick/slick-theme.css'
 import axios from 'axios'
 import ProductSliderCard from '../../card/ProductSliderCard'
 import { Link } from 'react-router-dom'
+import SpinnerPage from '../../spinner/SpinnerPage'
 
 const ProductSlider = () => {
   const [trendingProduct, setTrendingProduct] = useState([])
+  const [loading, setLoading] = useState(false)
 
   const getTrendingProduct = async () => {
     try {
+      setLoading(true)
       const { data } = await axios.get(
         'https://radiant-collections-and-decor.onrender.com/api/v1/product/get-trending'
       )
       if (data?.success) {
+        setLoading(false)
         setTrendingProduct(data.products)
       }
     } catch (error) {
@@ -69,22 +73,26 @@ const ProductSlider = () => {
         <Link to={`/trending`} style={{ textDecoration: 'none' }}>
           <h3 className="tp-heading">Trendy Products</h3>
         </Link>
-        <Slider {...settings}>
-          {trendingProduct.slice(0, 7).map((tp) => (
-            <Link
-              to={`/trending/${tp._id}`}
-              key={tp._id}
-              style={{ textDecoration: 'none' }}
-            >
-              <ProductSliderCard {...tp} />
-            </Link>
-          ))}
-          <div className="card card-button">
-            <Link to={`/trending`}>
-              <button className="btn">Explore More</button>
-            </Link>
-          </div>
-        </Slider>
+        {loading ? (
+          <SpinnerPage />
+        ) : (
+          <Slider {...settings}>
+            {trendingProduct.slice(0, 7).map((tp) => (
+              <Link
+                to={`/trending/${tp._id}`}
+                key={tp._id}
+                style={{ textDecoration: 'none' }}
+              >
+                <ProductSliderCard {...tp} />
+              </Link>
+            ))}
+            <div className="card card-button">
+              <Link to={`/trending`}>
+                <button className="btn">Explore More</button>
+              </Link>
+            </div>
+          </Slider>
+        )}
       </div>
     </>
   )

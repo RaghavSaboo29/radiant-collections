@@ -1,11 +1,7 @@
 import React from 'react'
-
+import './Spinner.css'
 const SpinnerPage = () => {
-  return (
-    <h1 className="d-flex align-items-center justify-content-center warn">
-      LOADING PLEASE WAIT ...
-    </h1>
-  )
+  return <h1 className="spinner-comp">LOADING PLEASE WAIT ...</h1>
 }
 
 export default SpinnerPage

@@ -1,0 +1,14 @@
+.spinner-comp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+  font-family: 'Forum';
+  font-size: 50px;
+}
+
+@media screen and (max-width: 780px) {
+  .spinner-comp {
+    font-size: 22px;
+  }
+}

@@ -13,6 +13,7 @@ import cushions from '../../images/category-page/cushions-page.jpg'
 import kitchenware from '../../images/category-page/kitchenware-page.jpg'
 import '../pages-css/AllCategory.css'
 import { Link } from 'react-router-dom'
+import SpinnerPage from '../../components/spinner/SpinnerPage'
 const ViewAllCategories = () => {
   const images = [
     wallhangings,
@@ -26,12 +27,14 @@ const ViewAllCategories = () => {
     kitchenware,
   ]
   const [category, setCategory] = useState([])
-
+  const [loading, setLoading] = useState(false)
   const getAllCategory = async () => {
+    setLoading(true)
     const { data } = await axios.get(
       'https://radiant-collections-and-decor.onrender.com/api/v1/category/get-category'
     )
     if (data?.success) {
+      setLoading(false)
       setCategory(data.category)
     }
   }
@@ -42,22 +45,30 @@ const ViewAllCategories = () => {
 
   return (
     <Layout>
-      <div className="category-container">
-        {category.map((c, index) => (
-          <Link
-            to={`/category/${c.slug}`}
-            key={c._id}
-            style={{ textDecoration: 'none' }}
-          >
-            <div className="category-item">
-              <div className="category-img">
-                <img src={images[index]} alt="" className="category-item-img" />
+      {loading ? (
+        <SpinnerPage />
+      ) : (
+        <div className="category-container">
+          {category.map((c, index) => (
+            <Link
+              to={`/category/${c.slug}`}
+              key={c._id}
+              style={{ textDecoration: 'none' }}
+            >
+              <div className="category-item">
+                <div className="category-img">
+                  <img
+                    src={images[index]}
+                    alt=""
+                    className="category-item-img"
+                  />
+                </div>
+                <h4 className="category-item-name">{c.name}</h4>
               </div>
-              <h4 className="category-item-name">{c.name}</h4>
-            </div>
-          </Link>
-        ))}
-      </div>
+            </Link>
+          ))}
+        </div>
+      )}
     </Layout>
   )
 }

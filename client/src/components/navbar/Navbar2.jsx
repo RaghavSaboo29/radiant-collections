@@ -45,7 +45,7 @@ const Navbar2 = () => {
   return (
     <>
       <header className="heading-2">
-        <h3>!!WELCOME TO RADIANT COLLECTIONS AND DECOR!!</h3>
+        <h3>! WELCOME TO RADIANT COLLECTIONS AND DECOR !</h3>
       </header>
       <nav className="navbar-2">
         <Link to={'/'} style={{ textDecoration: 'none' }}>

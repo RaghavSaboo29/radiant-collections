@@ -78,30 +78,33 @@ const CategoryProductSlider = (props) => {
 
   return (
     <>
-      {loading && <SpinnerPage />}
       <div className="product-slider">
         <Link to={`/category/${props.name}`} style={{ textDecoration: 'none' }}>
           <h3 className="cat-heading">{props.name}</h3>
         </Link>
-        <Slider {...settings}>
-          {categoryProduct.slice(0, 7).map((tp) => (
-            <Link
-              to={`/category/${props.name}/${tp._id}`}
-              style={{ textDecoration: 'none' }}
-              key={tp._id}
-            >
-              <ProductSliderCard {...tp} />
-            </Link>
-          ))}
-          <div className="card card-button">
-            <Link
-              to={`/category/${props.name}`}
-              style={{ textDecoration: 'none' }}
-            >
-              <button className="btn">Explore More</button>
-            </Link>
-          </div>
-        </Slider>
+        {loading ? (
+          <SpinnerPage />
+        ) : (
+          <Slider {...settings}>
+            {categoryProduct.slice(0, 7).map((tp) => (
+              <Link
+                to={`/category/${props.name}/${tp._id}`}
+                style={{ textDecoration: 'none' }}
+                key={tp._id}
+              >
+                <ProductSliderCard {...tp} />
+              </Link>
+            ))}
+            <div className="card card-button">
+              <Link
+                to={`/category/${props.name}`}
+                style={{ textDecoration: 'none' }}
+              >
+                <button className="btn">Explore More</button>
+              </Link>
+            </div>
+          </Slider>
+        )}
       </div>
     </>
   )
