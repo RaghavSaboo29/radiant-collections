@@ -79,14 +79,12 @@ const SingleCategory = () => {
 
   const filterProduct = async () => {
     try {
-      setLoading(true)
       const { data } = await axios.post(
         `https://radiant-collections-and-decor.onrender.com/api/v1/product/filter-category-product/${params.slug}/${filterPage}`,
         {
           radio,
         }
       )
-      setLoading(false)
       setProducts(data?.products)
       setFilterProducts(data?.products)
       setFilterTotal(data?.totalFilterProducts)
