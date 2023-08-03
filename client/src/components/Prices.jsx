@@ -2,12 +2,12 @@ export const Prices = [
   {
     _id: 0,
     name: `₹0 to ₹999`,
-    array: [0, 599],
+    array: [0, 999],
   },
   {
     _id: 1,
     name: `₹1,000 to ₹1,999`,
-    array: [600, 1999],
+    array: [1000, 1999],
   },
   {
     _id: 2,
