@@ -223,7 +223,7 @@ const ViewAllProducts = () => {
                     setPage(page + 1)
                   }}
                 >
-                  {loadMore ? 'LOADING' : 'LOAD MORE'}
+                  {loadingMore ? 'LOADING' : 'LOAD MORE'}
                 </button>
               )}
             </div>
