@@ -16,6 +16,7 @@ const ViewAllProducts = () => {
   const [open, setOpen] = useState(false)
 
   const [loading, setLoading] = useState(false)
+  const [loadingMore, setLoadingMore] = useState(false)
   const [page, setPage] = useState(1)
   const [total, setTotal] = useState(0)
   const [flag, setFlag] = useState(false)
@@ -56,7 +57,7 @@ const ViewAllProducts = () => {
   const loadMore = async () => {
     try {
       if (checked.length || radio.length) {
-        setLoading(true)
+        setLoadingMore(true)
         const { data } = await axios.post(
           `https://radiant-collections-and-decor.onrender.com/api/v1/product/product-filters/${filterPage}`,
           {
@@ -64,20 +65,20 @@ const ViewAllProducts = () => {
             radio,
           }
         )
-        setLoading(false)
+        setLoadingMore(false)
         setProducts([...products, ...data?.products])
         setFilterProducts([...products, ...data?.products])
       } else {
-        setLoading(true)
+        setLoadingMore(true)
         const { data } = await axios.get(
           `https://radiant-collections-and-decor.onrender.com/api/v1/product/get-product/product-list/${page}`
         )
-        setLoading(false)
+        setLoadingMore(false)
         setProducts([...products, ...data?.products])
       }
     } catch (error) {
       console.log(error)
-      setLoading(false)
+      setLoadingMore(false)
     }
   }
 
@@ -208,7 +209,7 @@ const ViewAllProducts = () => {
                     setFilterPage(filterPage + 1)
                   }}
                 >
-                  {loading ? 'LOADING' : 'LOAD MORE'}
+                  {loadingMore ? 'LOADING' : 'LOAD MORE'}
                 </button>
               )}
             </div>
@@ -222,7 +223,7 @@ const ViewAllProducts = () => {
                     setPage(page + 1)
                   }}
                 >
-                  {loading ? 'LOADING' : 'LOAD MORE'}
+                  {loadMore ? 'LOADING' : 'LOAD MORE'}
                 </button>
               )}
             </div>
