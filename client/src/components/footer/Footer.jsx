@@ -30,7 +30,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    to="/category/crockery"
+                    to="/category/dining"
                     style={{ textDecoration: 'none' }}
                     className="footer-link"
                   >
