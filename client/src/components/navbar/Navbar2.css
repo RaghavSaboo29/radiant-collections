@@ -91,7 +91,7 @@ ul li .navLink:hover::before {
 .search-box .search-input {
   display: block;
   position: absolute;
-  top: 69px;
+  top: 30px;
   right: -130px;
   width: 300px;
   height: 40px;

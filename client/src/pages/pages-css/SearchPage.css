@@ -42,14 +42,15 @@
   margin-top: 10px;
 }
 .sp-name {
-  font-weight: 400;
   font-size: 23px;
   color: black;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 .sp-price {
-  font-weight: 500;
   font-size: 20px;
-  color: rgb(181, 113, 25);
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
 }
 
 @media screen and (max-width: 450px) {
