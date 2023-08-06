@@ -30,35 +30,38 @@ const FeaturedPage = (props) => {
 
   return (
     <Layout>
-      <div className="fp-container">
-        {loading && <SpinnerPage />}
-        <div className="fp-top-container">
-          <h3 className="fp-heading">{props.heading.toUpperCase()}</h3>
-        </div>
-        <div className="fp-grid">
-          {featuredProducts.map((fp) => (
-            <Link
-              key={fp._id}
-              to={`/${props.path}/${fp._id}`}
-              style={{ textDecoration: 'none' }}
-            >
-              <div className="fp-card">
-                <div className="fp-img">
-                  <img src={fp?.images[0]?.url} alt="" />
+      {loading ? (
+        <SpinnerPage />
+      ) : (
+        <div className="fp-container">
+          <div className="fp-top-container">
+            <h3 className="fp-heading">{props.heading.toUpperCase()}</h3>
+          </div>
+          <div className="fp-grid">
+            {featuredProducts.map((fp) => (
+              <Link
+                key={fp._id}
+                to={`/${props.path}/${fp._id}`}
+                style={{ textDecoration: 'none' }}
+              >
+                <div className="fp-card">
+                  <div className="fp-img">
+                    <img src={fp?.images[0]?.url} alt="" />
+                  </div>
+                  <div className="fp-details">
+                    <h3 className="fp-name">
+                      {fp.name.length > 25
+                        ? `${fp.name.substring(0, 25)}...`
+                        : fp.name}{' '}
+                    </h3>
+                    <h4 className="fp-price">₹ {fp.price} </h4>
+                  </div>
                 </div>
-                <div className="fp-details">
-                  <h3 className="fp-name">
-                    {fp.name.length > 25
-                      ? `${fp.name.substring(0, 25)}...`
-                      : fp.name}{' '}
-                  </h3>
-                  <h4 className="fp-price">₹ {fp.price} </h4>
-                </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </Layout>
   )
 }

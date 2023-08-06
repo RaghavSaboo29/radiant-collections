@@ -37,7 +37,7 @@ const Dashboard = () => {
                   <tr>
                     <th scope="col">Product Id</th>
                     <th scope="col">Product Name</th>
-                    <th scope="col">Product Mongo Id</th>
+                    <th scope="col">Trending</th>
                     <th scope="col">Product Price</th>
                   </tr>
                 </thead>
@@ -46,13 +46,13 @@ const Dashboard = () => {
                     return (
                       <React.Fragment key={p._id}>
                         <tr>
-                          <td>{p.product_id}</td>
+                          <td>#{p.product_id}</td>
                           <td>
                             <Link to={`/dashboard/admin/product/${p._id}`}>
                               {p.name}
                             </Link>
                           </td>
-                          <td>{p._id}</td>
+                          <td>{p?.trending}</td>
                           <td>₹ {p.price}</td>
                         </tr>
                       </React.Fragment>
