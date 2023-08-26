@@ -18,7 +18,8 @@ const Navbar2 = () => {
 
   const getAllCategory = async () => {
     const { data } = await axios.get(
-      'https://radiant-collections-and-decor.onrender.com/api/v1/category/get-category'
+      // 'https://radiant-collections-and-decor.onrender.com/api/v1/category/get-category'
+      'https://radiant-collections.vercel.app/api/v1/category/get-category'
     )
     if (data?.success) {
       setCategory(data.category)
